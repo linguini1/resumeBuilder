@@ -8,12 +8,13 @@ from templates import MonospaceResume
 # Constants
 DATA_FILE = "resume.json"
 
+
 # Main
 def main():
 
     # Make resume
     resume = MonospaceResume(DATA_FILE)
-    resume.save_as(pdf=True, html=True)
+    resume.save_as(html=True)
 
 
 if __name__ == '__main__':
