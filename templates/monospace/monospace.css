@@ -3,7 +3,6 @@
   --primary: white;
   --secondary: black;
   --icon-width: 0.5cm;
-  --left-panel-width: 30%;
 }
 
 /* Font */
@@ -31,7 +30,7 @@ ul {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 p,
@@ -49,7 +48,7 @@ html {
 }
 
 body {
-  padding: 0.5in 0.5in;
+  padding: 0.5in 0.3in;
 }
 
 /* Styling */
@@ -66,7 +65,7 @@ body {
 }
 
 .education-list-item {
-  margin-bottom: 0.3cm;
+  margin-bottom: 0.2cm;
 }
 
 #abilities {
@@ -99,9 +98,13 @@ section {
 }
 
 #left-panel {
-  width: var(--left-panel-width);
+  width: 32%;
   border-right-style: solid;
   border-right-width: 1px;
+}
+
+#right-panel {
+  width: 68%;
 }
 
 #left-panel,

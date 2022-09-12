@@ -174,7 +174,7 @@ class MonospaceResume(ResumeTemplate):
             education_item_tag = monospace.create_education_item(education_item)
             education_section.append(education_item_tag)
 
-    def __skills(self):
+    def __skills(self) -> None:
 
         """Populates skills."""
 
@@ -190,9 +190,73 @@ class MonospaceResume(ResumeTemplate):
         tools_section.append(monospace.create_list(tools))
         abilities_section.append(monospace.create_list(abilities))
 
+    def __experience(self) -> None:
+
+        """Populates the work experience section."""
+
+        experience_section = self._search_by_attribute("id", "experience")
+
+        for experience_item in self.data['experience']:
+            experience_tag = monospace.create_experience_item(experience_item)
+            experience_section.append(experience_tag)
+
+    def __extracurricular(self) -> None:
+
+        """Populates the extracurricular section."""
+
+        extracurricular_section = self._search_by_attribute("id", "extracurricular")
+
+        for extracurricular_item in self.data['extracurricular']:
+            extracurricular_tag = monospace.create_extracurricular_item(extracurricular_item)
+            extracurricular_section.append(extracurricular_tag)
+
+    def __achievements(self) -> None:
+
+        """Populates the awards section."""
+
+        awards_section = self._search_by_attribute("id", "achievements")
+
+        for achievement in self.data['achievements']:
+            achievement_tag = monospace.create_achievement_item(achievement)
+            awards_section.append(achievement_tag)
+
+    def __interests(self) -> None:
+
+        """Populates interests section."""
+
+        interests_section = self._search_by_attribute("id", "interests")
+        interests_tag = monospace.create_list(self.data['interests'])
+        interests_section.append(interests_tag)
+
+    def __projects(self) -> None:
+
+        """Populates the projects section."""
+
+        projects_section = self._search_by_attribute("id", "projects")
+
+        for project in self.data['projects']:
+            project_tag = monospace.create_projects_item(project)
+            projects_section.append(project_tag)
+
+    def __references(self) -> None:
+
+        """Populates the references section."""
+
+        references_section = self._search_by_attribute("id", "references")
+
+        for reference in self.data['references']:
+            reference_tag = monospace.create_reference_item(reference)
+            references_section.append(reference_tag)
+
     def _populate(self) -> None:
 
         self.__profile()
         self.__contact()
         self.__education()
         self.__skills()
+        self.__experience()
+        self.__extracurricular()
+        self.__achievements()
+        self.__interests()
+        self.__projects()
+        self.__references()

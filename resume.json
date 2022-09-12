@@ -214,12 +214,12 @@
     },
     {
       "title": "beanO",
-      "year": "",
+      "year": "2022",
       "description": "React mobile web application using Django Rest Framework for backend API. Graphically displayed and allowed addition to a collection of jelly beans."
     },
     {
       "title": "cypher",
-      "year": "",
+      "year": "2022",
       "description": "Custom Google Assistant that uses a Flask web API to complete requests sent by Google Assistant and send responses to be used by the application."
     }
   ],
