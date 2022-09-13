@@ -99,7 +99,11 @@ class ResumeTemplate(ABC):
             html_file.write(str(self.template))
 
         if pdf:  # Save PDF if selected
-            self.__save_as_pdf()
+            # self.__save_as_pdf()
+            # TODO Switch html parameter back to default of False when implemented
+            raise NotImplementedError(
+                "Unfortunately, PDF saving does not work at this time due to limitations of wkhtmltopdf."
+            )
 
         if not html:  # If HTML not desired, delete it after PDF is saved
             os.remove(f"{self.file_path}.html")

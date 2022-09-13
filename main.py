@@ -14,7 +14,7 @@ def main():
 
     # Make resume
     resume = MonospaceResume(DATA_FILE)
-    resume.save_as(html=True)
+    resume.save_as()
 
 
 if __name__ == '__main__':
