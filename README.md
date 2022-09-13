@@ -15,8 +15,8 @@ Unfortunately, wkhtmltopdf does not seem to support flexbox styling.
 
 If you create a single page resume with this application, you can
 turn it into a PDF on [sejda.com](https://www.sejda.com/html-to-pdf).
-
-Resumes are outputted on legal paper size.
+Select the single long page option, and then later use their cropping tool
+to crop along the black border.
 
 ## Themes
 ### Monospace
